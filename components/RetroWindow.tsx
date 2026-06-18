@@ -69,10 +69,10 @@ export function RetroWindow({
         <span className="window-icon">{icon}</span>
         <span className="window-title">{title}</span>
         <div className="window-controls">
-          <button type="button" className="win-btn minimize" onClick={() => setBodyHidden((v) => !v)}>
+          <button type="button" className="win-btn minimize" onClick={() => setBodyHidden((v) => v = true)}>
             _
           </button>
-          <button type="button" className="win-btn maximize">□</button>
+          <button type="button" className="win-btn maximize" onClick={() => setBodyHidden((v) => v = false)}>□</button>
           <button type="button" className="win-btn close" onClick={onClose}>×</button>
         </div>
       </div>
